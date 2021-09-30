@@ -9,6 +9,7 @@ require('./models/dbConfig');
 
 const postsRoutes = require('./routes/postsController');
 
+const bodyParser = require('body-parser');
 /* ############################################################ */
 
 
@@ -16,6 +17,7 @@ const postsRoutes = require('./routes/postsController');
 
 /* ##############     Middleware     ########################## */
 
+app.use(bodyParser.json());
 app.use('/posts', postsRoutes);
 
 /* ############################################################ */
