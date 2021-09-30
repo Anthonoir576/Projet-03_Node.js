@@ -7,6 +7,17 @@ const app = express();
 // Appel DB
 require('./models/dbConfig');
 
+const postsRoutes = require('./routes/postsController');
+
+/* ############################################################ */
+
+
+
+
+/* ##############     Middleware     ########################## */
+
+app.use('/posts', postsRoutes);
+
 /* ############################################################ */
 
 

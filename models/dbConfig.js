@@ -4,7 +4,7 @@
 const mongoose = require('mongoose');
 mongoose.connect(
 
-    "mongodb+srv://Anthonoir576:475719711993@nodeapi.gpfxq.mongodb.net/nodeAPI?retryWrites=true&w=majority",
+    "mongodb+srv://Anthonoir576:475719711993@nodeapi.gpfxq.mongodb.net/API_REST?retryWrites=true&w=majority",
     { useNewUrlParser: true, useUnifiedTopology: true },
     (error) => {
 
