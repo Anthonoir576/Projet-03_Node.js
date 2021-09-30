@@ -6,5 +6,5 @@
     - Dans le terminal accéder au dossier du projet
     - npm install (Pour les modules nodes)
     - lancer : "nodemon server" ou "node server" ou npm start configurer dans package.json via ce même dossier
-3. Adresse de l'API : http://localhost:5500/
+3. Adresse de l'API : http://localhost:5500/posts
 
