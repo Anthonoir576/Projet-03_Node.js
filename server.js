@@ -4,6 +4,9 @@
 const express = require('express');
 const app = express();
 
+// Appel DB
+require('./models/dbConfig');
+
 /* ############################################################ */
 
 
