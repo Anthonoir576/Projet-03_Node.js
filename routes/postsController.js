@@ -95,6 +95,34 @@ router.put('/:id', (request, response) => {
 
 });
 
+router.delete('/:id', (request, response) => {
+
+    if (!ObjectID.isValid(request.params.id)) {
+
+        return response.status(400).send(' Identifiant inconnu : ' + request.params.id);
+
+    } else {
+
+        PostsModel.findByIdAndRemove(
+            
+            request.params.id,
+            (error, docs) => {
+
+                if(!error) {
+                    response.send(docs)
+                } else {
+                    console.log('le produit n\'est pas supprimer :' + error);
+                };
+
+            }
+            
+        )
+
+
+    };
+
+});
+
 module.exports = router;
 
 /* ############################################################ */
