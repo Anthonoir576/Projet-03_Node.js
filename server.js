@@ -4,6 +4,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const CORS = require('cors');
 
 // Appel DB
 require('./models/dbConfig');
@@ -19,6 +20,7 @@ const bodyParser = require('body-parser');
 /* ##############     Middleware     ########################## */
 
 app.use(bodyParser.json());
+app.use(CORS());
 app.use('/posts', postsRoutes);
 
 /* ############################################################ */
